@@ -104,7 +104,7 @@ Document LoadAndConvertDocumentForWindowsMR(
     bool meshCompression)
 {
     // Load the document
-    std::experimental::filesystem::path inputFilePathFS(inputFilePath);
+    std::filesystem::path inputFilePathFS(inputFilePath);
     std::wstring inputFileName = inputFilePathFS.filename();
     std::wcout << L"Loading input document: " << inputFileName << L"..." << std::endl;
 

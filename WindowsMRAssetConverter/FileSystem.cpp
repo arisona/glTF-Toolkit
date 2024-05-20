@@ -9,10 +9,10 @@ std::wstring FileSystem::GetRelativePathWithTrailingSeparator(std::wstring from,
     // once c++17 filesystem is fully supported, this should become something like:
     // return std::filesystem::relative(to, from) + std::filesystem::path::preferred_separator;
 
-    std::experimental::filesystem::path fromFS(std::experimental::filesystem::canonical(from));
-    std::experimental::filesystem::path toFS(std::experimental::filesystem::canonical(to));
+    std::filesystem::path fromFS(std::filesystem::canonical(from));
+    std::filesystem::path toFS(std::filesystem::canonical(to));
 
-    std::experimental::filesystem::path result;
+    std::filesystem::path result;
     auto fromIter = fromFS.begin();
     auto toIter = toFS.begin();
 
@@ -39,7 +39,7 @@ std::wstring FileSystem::GetRelativePathWithTrailingSeparator(std::wstring from,
                 toIter++;
             }
 
-            result += std::experimental::filesystem::path::preferred_separator;
+            result += std::filesystem::path::preferred_separator;
         }
     }
 
