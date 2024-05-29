@@ -158,7 +158,7 @@ namespace
         if (!sceneNodeMatch || primaryScenes.empty())
         {
             // Mis-match or empty scene; either way cannot merge Lod in
-            throw new std::runtime_error("Primary Scene either empty or does not match scene node count of LOD gltf");
+            throw std::runtime_error("Primary Scene either empty or does not match scene node count of LOD gltf");
         }
 
         std::string nodeLodLabel = "_lod" + std::to_string(MaxLODLevel);
@@ -392,7 +392,7 @@ namespace
                         }
                         else
                         {
-                            throw new std::runtime_error("Couldn't find the shared material in the highest LOD.");
+                            throw std::runtime_error("Couldn't find the shared material in the highest LOD.");
                         }
                     }
                     else
